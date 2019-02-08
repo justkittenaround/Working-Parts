@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue Nov 20 12:35:08 2018
-
 @author: Rachel St Clair
 """
 
@@ -46,60 +45,19 @@ deeplabcut.train_network(config_path, shuffle=1, trainingsetindex=0, gputouse=39
 deeplabcut.evaluate_network(config_path,shuffle=[1], plotting=True)
 
 #analyze new video
-deeplabcut.analyze_videos(config_path,[‘/analysis/project/videos/reachingvideo1.avi’],shuffle=1, save_as_csv=True)
+deeplabcut.analyze_videos(config_path,['path of test video'],shuffle=1, save_as_csv=True)
 
 #create labeled video --> optional parameters
-deeplabcut.create_labeled_video(config_path,[‘/analysis/project/videos/reachingvideo1.avi’,‘/analysis/project/videos/reachingvideo2.avi’])
+deeplabcut.create_labeled_video(config_path,['pathof test video'])
 
 #plot trajectory of the extracted poses across the analyzed video
-deeplabcut.plot_trajectories(‘config_path’,[‘/analysis/project/videos/reachingvideo1.avi’])
+deeplabcut.plot_trajectories(‘config_path’,['path of test video'])
 
 #extract outlier frames
-deeplabcut.extract_outlier_frames(‘config_path’,[‘videofile_path’])
+deeplabcut.extract_outlier_frames(‘config_path’,['path of test video'])
 
 #refine labels int raining set for outlier condition
-deeplabcut.refine_labels(‘config_path’)
+deeplabcut.refine_labels('config_path')
 
 #merge corrected frames dataset to existing
-deeplabcut.merge_datasets(‘config_path’)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+deeplabcut.merge_datasets('config_path')
