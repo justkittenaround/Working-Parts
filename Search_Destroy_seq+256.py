@@ -17,6 +17,7 @@ def search(folder):
 		if stringlen > 256:
 			os.remove(filepath)
 			print(filename)
+		print('meowzers')
 search('testA')
 search('testB')
 search('trainA')
